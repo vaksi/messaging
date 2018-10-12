@@ -1,0 +1,19 @@
+/*  service.go
+*
+* @Author:             Audy Vaksi <vaksipranata@gmail.com>
+* @Date:               October 08, 2018
+* @Last Modified by:   @vaksi
+* @Last Modified time: 08/10/18 13:07
+ */
+
+package healths
+
+// HealthService of struct HealthService
+type HealthService struct {}
+
+// HealthCheckStatus for retrieve data check status
+func (h *HealthService) HealthCheckStatus() HealthModel {
+    return HealthModel{
+        Service: "user_management",
+    }
+}
