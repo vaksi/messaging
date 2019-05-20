@@ -13,7 +13,7 @@ api:
 
 MariaDB:
   db_name: messaging
-  host: localhost
+  host: mysql
   port: 3306
   user: root
   password:
