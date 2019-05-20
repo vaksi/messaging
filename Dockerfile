@@ -37,7 +37,7 @@ RUN mkdir logs && touch logs/messaging.log
 COPY --from=builder $BUILDDIR/messaging messaging
 COPY --from=builder $BUILDDIR/configs/app.yaml configs/app.yaml
 
-CMD ["./messaging","http"]
-CMD ["./messaging","consumer"]
+ENTRYPOINT ["./messaging"]
+#CMD ["./messaging","consumer"]
 
 EXPOSE 8081

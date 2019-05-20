@@ -23,8 +23,18 @@ So please install docker into your PC https://docs.docker.com/install
 The firs you must extract this file into your workspace project.
 
 How To run :
+
+    Run Mysql, Kafka, and Zookeeper
+    $ docker-compose up   
     
-    $ docker-compose up    
+    Download dependecies 
+    $ go mod download
+    
+    Run Http Server
+    $ go run main.go http
+     
+    Run Consumer message
+    $ go run main.go consumer
 
 ## Documentation
 This service has documentation following swagger for your try. So please se file in path ./api/api_spech.yaml.

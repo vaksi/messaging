@@ -13,8 +13,8 @@ api:
 
 MariaDB:
   db_name: messaging
-  host: mysql
-  port: 3306
+  host: localhost
+  port: 33060
   user: admin
   password: 12345
   charset: utf8
@@ -24,7 +24,7 @@ log:
   filename: "messaging.log"
 
 kafka:
-  brokerList: "kafka:9092"
+  brokerList: "localhost:9092"
   groupId: "messaging"
   messageCountStart: ""
   offsetType: "-1"

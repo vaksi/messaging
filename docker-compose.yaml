@@ -12,23 +12,15 @@ services:
       - MYSQL_USER=admin
       - MYSQL_PASSWORD=12345
       - MYSQL_ROOT_PASSWORD=12345
-    networks:
-      - backend
-  app:
-    container_name: messaging_app
-    build: .
-    restart: always
-    ports:
-      - 8081:8081
-    networks:
-      - backend
+#    networks:
+#      - backend
   zookeeper:
     image: wurstmeister/zookeeper
     hostname: zookeeper
     ports:
       - "2181:2181"
-    networks:
-      - backend
+#    networks:
+#      - backend
   kafka:
     image: wurstmeister/kafka
     command: [start-kafka.sh]
@@ -41,7 +33,16 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    networks:
-      - backend
-networks:
-  backend:
+#    networks:
+#      - backend
+#  app:
+#    container_name: messaging_app
+#    build: .
+#    command: [./messaging http]
+#    restart: always
+#    ports:
+#      - 8081:8081
+#    networks:
+#      - backend
+#networks:
+#  backend:
