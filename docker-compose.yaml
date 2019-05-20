@@ -15,7 +15,7 @@ services:
     networks:
       - backend
   app:
-    container_name: app_messaging
+    container_name: messaging_app
     build: .
     restart: always
     ports:

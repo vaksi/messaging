@@ -1,5 +1,5 @@
 # Stage build
-FROM golang:1.11-alpine AS build_base
+FROM golang:1.11-alpine AS builder
 
 COPY . /go/src/github.com/vaksi/messaging
 WORKDIR /go/src/github.com/vaksi/messaging
