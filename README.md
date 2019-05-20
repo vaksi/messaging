@@ -14,18 +14,25 @@ Messaging service is used by created simple message and retrieve message impleme
 * Kafka (for data streaming)
 
 ### Installation Required 
+#### Install Golang 
+ I use go version for service compatible `go1.12.5 darwin/amd64`
 #### Install Docker
 I Use Docker for deployment my apps and integration app. Docker is very simple for running this app.
 
 So please install docker into your PC https://docs.docker.com/install
 
+#### Install Kafka and Run
+This service using kafka for event streaming. Prepare install please check this link https://kafka.apache.org/quickstart
+
 ### Deploy and run 
 The firs you must extract this file into your workspace project.
 
 How To run :
-
-    Run Mysql, Kafka, and Zookeeper
-    $ docker-compose up   
+    
+    Run Mysql
+    $ docker-compose -f docker-compose-mysql up   
+    
+    Run Kafka 
     
     Download dependecies 
     $ go mod download

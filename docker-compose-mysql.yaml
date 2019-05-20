@@ -1,0 +1,19 @@
+version: "2.3"
+services:
+  mysql:
+    container_name: mysql_messaging
+    image: mysql:5.7
+    volumes:
+      - ./mysql/docker-entrypoint-initdb.d/:/docker-entrypoint-initdb.d/
+    ports:
+      - 33060:3306
+    environment:
+      - MYSQL_DATABASE=messaging
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=12345
+      - MYSQL_ROOT_PASSWORD=12345
+    networks:
+      - database
+networks:
+  database:
+    driver: bridge
