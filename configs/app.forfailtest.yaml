@@ -1,0 +1,10 @@
+#app config
+appfalse:
+  name: massaging
+  port: 8081
+  env: dev #dev|stg|prod
+  timezone: Asia/Jakarta
+  debug: true  #in production set false
+  read_timeout: 10 # in second
+  write_timeout: 10 # in second
+  callback_timeout: 10 # in second

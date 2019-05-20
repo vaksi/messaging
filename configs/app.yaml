@@ -1,0 +1,37 @@
+app:
+  name: messaging
+  port: 8081
+  env: dev #dev|stg|prod
+  timezone: Asia/Jakarta
+  debug: true  #in production set false
+  read_timeout: 10 # in second
+  write_timeout: 10 # in second
+  callback_timeout: 10 # in second
+
+api:
+  prefix: "/messaging/v1"
+
+MariaDB:
+  db_name: messaging
+  host: localhost
+  port: 3306
+  user: root
+  password:
+  charset: utf8
+
+log:
+  dir: "logs"
+  filename: "messaging.log"
+
+kafka:
+  brokerList: "localhost:9092"
+  groupId: "messaging"
+  messageCountStart: ""
+  offsetType: "-1"
+  partition: "0"
+  messaging_consumer:
+    topic: "messaging"
+    group: "messaging_1"
+    time_sleep: 0
+    message_poll: 200
+    consumer_type: "messaging"

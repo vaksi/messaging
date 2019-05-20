@@ -1,0 +1,24 @@
+#app config
+app:
+  name: massaging
+  port: 8081
+  env: dev #dev|stg|prod
+  timezone: Asia/Jakarta
+  debug: true  #in production set false
+  read_timeout: 10 # in second
+  write_timeout: 10 # in second
+  callback_timeout: 10 # in second
+
+api:
+  prefix: "/massaging/v1"
+
+MariaDB:
+  db_name: massaging
+  host: localhost
+  port: 3306
+  user: root
+  charset: utf8
+
+log:
+  dir: "logs"
+  filename: "messaging.logrus"
